@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smp 01 Wonokerto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Latar belakang sangat lembut */
+        }
+        /* Tambahan styling untuk memastikan gambar mengisi kotak galeri */
+        .aspect-w-1 {
+          /* Ini adalah kelas untuk Aspect Ratio, pastikan diaktifkan di Tailwind config jika tidak berfungsi.
+             Untuk kasus ini, kita mengandalkan w-full h-full dan object-cover di tag img. */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-amber-500 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-white text-2xl font-bold tracking-tight">
+                    Smp 01 Wonokerto
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#beranda" class="text-white hover:text-amber-800 transition duration-150 py-2">Beranda</a>
+                    <a href="#profil" class="text-white hover:text-amber-800 transition duration-150 py-2">Visi & Misi</a>
+                    <a href="#staf" class="text-white hover:text-amber-800 transition duration-150 py-2">Guru & Staf</a>
+                    <a href="#ekskul" class="text-white hover:text-amber-800 transition duration-150 py-2">Ekskul</a>
+                    <a href="#prestasi" class="text-white hover:text-amber-800 transition duration-150 py-2">Prestasi</a>
+                    <a href="#galeri" class="text-white hover:text-amber-800 transition duration-150 py-2">Galeri</a>
+                    <a href="#ppdb" class="inline-block px-3 py-1 text-sm font-bold text-amber-500 bg-white rounded-full hover:bg-gray-100 transition duration-150">PPDB</a>
+                </nav>
+                <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-600 transition duration-300">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#beranda" class="text-white hover:bg-amber-500 block px-3 py-2 rounded-md text-base font-medium">Beranda</a>
+                <a href="#profil" class="text-white hover:bg-amber-500 block px-3 py-2 rounded-md text-base font-medium">Visi & Misi</a>
+                <a href="#staf" class="text-white hover:bg-amber-500 block px-3 py-2 rounded-md text-base font-medium">Guru & Staf</a>
+                <a href="#ekskul" class="text-white hover:bg-amber-500 block px-3 py-2 rounded-md text-base font-medium">Ekskul</a>
+                <a href="#prestasi" class="text-white hover:bg-amber-500 block px-3 py-2 rounded-md text-base font-medium">Prestasi</a>
+                <a href="#galeri" class="text-white hover:bg-amber-500 block px-3 py-2 rounded-md text-base font-medium">Galeri</a>
+                <a href="#ppdb" class="text-white hover:bg-amber-500 block px-3 py-2 rounded-md text-base font-medium font-bold">Info PPDB</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="relative bg-amber-400 h-[60vh] flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 bg-black opacity-10"></div>
+            <div class="relative z-10 p-6 max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4 leading-tight">
+                    Mencetak Generasi Unggul dan Berkarakter
+                </h1>
+                <p class="text-xl text-gray-800 mb-8">
+                    Sekolah Mandiri berkomitmen pada pendidikan holistik yang relevan untuk masa depan.
+                </p>
+                <a href="#ppdb" class="inline-block px-8 py-3 text-lg font-semibold text-amber-700 bg-white rounded-full shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                    Daftar Sekarang!
+                </a>
+            </div>
+        </section>
+
+        <section id="profil" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-amber-700">Visi & Misi Sekolah</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="bg-yellow-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-semibold mb-4 text-amber-600 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.275a1.914 1.914 0 010 2.678L16.4 12l-2.75 2.75a1.914 1.914 0 01-2.678 0L7.382 9.382a1.914 1.914 0 010-2.678L9.6 4.4z"></path></svg>
+                            Visi
+                        </h3>
+                        <p class="text-gray-600">"Mewujudkan peserta didik yang beriman dan bertakwa, berakhlak mulia, cerdas, terampil, berbudaya, dan peduli lingkungan". </p>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-semibold mb-4 text-amber-600 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Misi
+                        </h3>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Mengembangkan keimanan dan ketakwaan terhadap Tuhan Yang Maha Esa melalui pemahaman, penghayatan, dan pengamalan ajaran agama.</li>
+                            <li>Membentuk peserta didik berbudi pekerti luhur, rendah hati, dan santun dalam bersikap dan berperilaku.</li>
+                            <li>Mendorong pencapaian prestasi dalam bidang akademik dan non-akademik.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="staf" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-16 text-amber-700">Guru & Staf</h2>
+              
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-md hover:bg-yellow-100 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Basuki S.Pd.</p>
+                        <p class="text-amber-600 text-sm">Kepala Sekolah</p>
+                    </div>
+
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-md hover:bg-yellow-100 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Febriya Safitri S.pd</p>
+                        <p class="text-amber-600 text-sm">Seni dan Budaya</p>
+                    </div>
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-md hover:bg-yellow-100 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Mulyono S.pd</p>
+                        <p class="text-amber-600 text-sm">Matematika</p>
+                    </div>
+
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-md hover:bg-yellow-100 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Sutari S.Pd</p>
+                        <p class="text-amber-600 text-sm">Ilmu Pengetahuan Alam (IPA)</p>
+                    </div>
+
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-md hover:bg-yellow-100 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Ibnu khoir S.pd</p>
+                        <p class="text-amber-600 text-sm">Pendidikan Agama dan Budi Pekerti</p>
+                    </div>
+
+                    <div class="p-6 bg-yellow-50 rounded-lg shadow-md hover:bg-yellow-100 transition duration-300">
+                        <p class="text-lg font-bold text-gray-900">Bambang Adi, M.Sc</p>
+                        <p class="text-amber-600 text-sm">Konselor Pendidikan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ekskul" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-amber-700">Kegiatan Ekstrakurikuler</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 bg-yellow-50 rounded-lg shadow-md border-b-4 border-amber-500">
+                        <svg class="w-10 h-10 text-amber-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        <p class="font-semibold text-gray-900">Robotika & Coding</p>
+                    </div>
+                    <div class="p-4 bg-yellow-50 rounded-lg shadow-md border-b-4 border-amber-500">
+                        <svg class="w-10 h-10 text-amber-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                        <p class="font-semibold text-gray-900">Jurnalistik</p>
+                    </div>
+                    <div class="p-4 bg-yellow-50 rounded-lg shadow-md border-b-4 border-amber-500">
+                        <svg class="w-10 h-10 text-amber-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2 3 .895 3 2-1.343 2-3 2m0-8V4m0 12v4"></path></svg>
+                        <p class="font-semibold text-gray-900">Sepak Bola / Futsal</p>
+                    </div>
+                    <div class="p-4 bg-yellow-50 rounded-lg shadow-md border-b-4 border-amber-500">
+                        <svg class="w-10 h-10 text-amber-500 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        <p class="font-semibold text-gray-900">Seni Tari Tradisional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prestasi" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-amber-700">Prestasi Terbaru</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start bg-yellow-50 p-6 rounded-xl shadow-md">
+                        <div class="flex-shrink-0">
+                            <svg class="w-8 h-8 text-amber-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.689l-3.692 7.042-7.774 1.13c-.6.087-.842.85-.399 1.282l5.637 5.498-1.334 7.776c-.103.6.52.924 1.054.654l6.99-3.676 6.99 3.676c.534.27 1.157-.054 1.054-.654l-1.334-7.776 5.637-5.498c.443-.432.2-.195-.399-1.282l-7.774-1.13-3.692-7.042c-.281-.535-1.01-.535-1.291 0z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-xl font-bold text-gray-900">Juara 1 Lomba Cipta Robot Tingkat Nasional</p>
+                            <p class="text-gray-600">Oleh Tim Robotika, Kategori Sekolah Menengah, Oktober 2024.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-yellow-50 p-6 rounded-xl shadow-md">
+                        <div class="flex-shrink-0">
+                            <svg class="w-8 h-8 text-amber-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-xl font-bold text-gray-900">Medali Emas Olimpiade Sains Nasional (OSN) Bidang Kimia</p>
+                            <p class="text-gray-600">Diraih oleh Siswa A.S., Agustus 2024.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-amber-700">Galeri Foto Kegiatan</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://picsum.photos/id/1018/400/400" alt="Foto Kegiatan Belajar di Kelas" class="object-cover w-full h-full">
+                    </div>
+                    
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://picsum.photos/id/304/400/400" alt="Foto Kegiatan Ekstrakurikuler Olahraga" class="object-cover w-full h-full">
+                    </div>
+                    
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://picsum.photos/id/160/400/400" alt="Foto Pentas Seni Sekolah" class="object-cover w-full h-full">
+                    </div>
+                    
+                    <div class="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://picsum.photos/id/357/400/400" alt="Foto Upacara Bendera Sekolah" class="object-cover w-full h-full">
+                    </div>
+                    
+                </div>
+                <div class="text-center mt-10">
+                    <a href="#" class="inline-block px-6 py-2 text-md font-semibold text-white bg-amber-500 rounded-lg shadow hover:bg-amber-600 transition duration-300">Lihat Semua Foto</a>
+                </div>
+            </div>
+        </section>
+        <section id="ppdb" class="py-20 bg-gray-50 border-t-4 border-amber-500">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4 text-amber-700">Penerimaan Peserta Didik Baru (PPDB)</h2>
+                <p class="text-xl text-gray-600 mb-8">Tahun Ajaran 2025/2026 telah dibuka!</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="p-6 bg-amber-50 rounded-xl shadow-lg">
+                        <p class="text-3xl font-extrabold text-amber-700">01</p>
+                        <p class="text-lg font-semibold mt-2">Pendaftaran Online</p>
+                        <p class="text-sm text-gray-600">Batas Akhir: 30 November</p>
+                    </div>
+                    <div class="p-6 bg-amber-50 rounded-xl shadow-lg">
+                        <p class="text-3xl font-extrabold text-amber-700">02</p>
+                        <p class="text-lg font-semibold mt-2">Tes Seleksi</p>
+                        <p class="text-sm text-gray-600">Pelaksanaan: 15 Desember</p>
+                    </div>
+                    <div class="p-6 bg-amber-50 rounded-xl shadow-lg">
+                        <p class="text-3xl font-extrabold text-amber-700">03</p>
+                        <p class="text-lg font-semibold mt-2">Pengumuman</p>
+                        <p class="text-sm text-gray-600">Hasil: 30 Desember</p>
+                    </div>
+                </div>
+
+                <a href="#" class="mt-10 inline-block px-10 py-4 text-xl font-bold text-white bg-amber-700 rounded-full shadow-xl hover:bg-amber-800 transition duration-300 transform hover:scale-105">
+                    Link Pendaftaran Resmi
+                </a>
+            </div>
+        </section>
+
+        <section id="kontak" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-amber-700">Hubungi Kami</h2>
+                <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
+                            <textarea id="pesan" name="pesan" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-amber-500 hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition duration-150">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-amber-600 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Sekolah Mandiri. Hak Cipta Dilindungi.</p>
+            <div class="mt-2 space-x-4 text-sm">
+                <a href="#" class="hover:text-amber-200">Kebijakan Privasi</a>
+                <span class="text-amber-300">|</span>
+                <a href="#" class="hover:text-amber-200">Ketentuan Penggunaan</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (!document.getElementById('mobile-menu').classList.contains('hidden')) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
