@@ -1,325 +1,296 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SMP Negeri 01 Wonokerto - Tugas Sederhana</title>
-  <!-- Load Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Styling dasar untuk tampilan yang bersih */
-    body {
-      font-family: sans-serif;
-      background-color: #f7f7f7;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMP Negeri 01 Wonokerto - Tugas Sederhana</title>
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Styling dasar untuk tampilan yang bersih */
+    body {
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+    }
 
-    .hero-section {
-            /* Atur tinggi agar memenuhi viewport */
-            min-height: 100vh; /* Memenuhi 100% tinggi viewport */
-            display: flex; /* Untuk memposisikan konten di tengah */
-            align-items: center; /* Vertikal tengah */
-            justify-content: center; /* Horizontal tengah */
+    .hero-section {
+            /* Atur tinggi agar memenuhi viewport */
+            min-height: 100vh; /* Memenuhi 100% tinggi viewport */
+            display: flex; /* Untuk memposisikan konten di tengah */
+            align-items: center; /* Vertikal tengah */
+            justify-content: center; /* Horizontal tengah */
 
-            /* Properti gambar latar belakang */
-            background-image: url('smp 1 wonokertoo.jpeg'); /* Ganti dengan path gambar Anda */
-            background-size: cover; /* Gambar menutupi seluruh area */
-            background-position: center center; /* Posisikan gambar di tengah */
-            background-repeat: no-repeat; /* Jangan ulang gambar */
-            background-attachment: fixed; /* (Opsional) Gambar tetap di tempat saat di-scroll */
-            position: relative; /* Penting untuk overlay jika digunakan */
-            z-index: 1; /* Agar overlay bisa diletakkan di atasnya */
-        }
+            /* Properti gambar latar belakang */
+            background-image: url('smp 1 wonokertoo.jpeg'); /* Ganti dengan path gambar Anda */
+            background-size: cover; /* Gambar menutupi seluruh area */
+            background-position: center center; /* Posisikan gambar di tengah */
+            background-repeat: no-repeat; /* Jangan ulang gambar */
+            background-attachment: fixed; /* (Opsional) Gambar tetap di tempat saat di-scroll */
+            position: relative; /* Penting untuk overlay jika digunakan */
+            z-index: 1; /* Agar overlay bisa diletakkan di atasnya */
+        }
 
-        /* Opsi: Tambahkan overlay gelap atau terang agar teks lebih mudah dibaca */
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.3); /* Overlay hitam transparan 30% */
-            z-index: 2; /* Di atas gambar, di bawah konten */
-        }
+        /* Opsi: Tambahkan overlay gelap atau terang agar teks lebih mudah dibaca */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3); /* Overlay hitam transparan 30% */
+            z-index: 2; /* Di atas gambar, di bawah konten */
+        }
 
-        /* Pastikan konten berada di atas overlay */
-        .hero-section .content-wrapper {
-            position: relative;
-            z-index: 3; /* Di atas overlay */
-        }
-  </style>
+        /* Pastikan konten berada di atas overlay */
+        .hero-section .content-wrapper {
+            position: relative;
+            z-index: 3; /* Di atas overlay */
+        }
+  </style>
 </head>
 <body class="text-gray-800">
 
-  <!-- HEADER DENGAN WARNA KUNING MUDA (AMBER-400) -->
-  <header class="bg-amber-400 shadow-md sticky top-0 z-10">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
-      <!-- Logo/Nama Sekolah -->
-      <a href="#beranda" class="text-gray-800 text-xl font-bold">
-          SMPN 01 WONOKERTO
-      </a>
-      <!-- Navigasi Minimal -->
-      <nav class="space-x-4">
-        <a href="#profil" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Profil</a>
-        <a href="#visi" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Visi Misi</a>
-        <a href="#ekskul" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Ekskul</a>
-        <a href="#prestasi" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Prestasi</a>
-        <!-- Menambahkan tautan navigasi ke Galeri -->
-        <a href="#galeri" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Galeri</a>
-        <a href="#guru" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Guru & Staf</a>
-        <a href="#ppdb" class="bg-amber-700 text-white px-3 py-1 rounded text-sm font-medium hover:bg-amber-800">PPDB</a>
-      </nav>
-    </div>
-  </header>
-  
-  <main class="max-w-4xl mx-auto px-4 py-8">
-    
-    <!-- BERANDA (Hero Section) -->
-    <section id="beranda" class="hero-section text-center pt-16 pb-20">
-    <div class="content-wrapper bg-white/70 p-8 md:p-12 rounded-lg shadow-xl mx-auto max-w-4xl">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
-            Selamat Datang di SMPN 01 Wonokerto
-        </h1>
-        <p class="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
-            Menciptakan Generasi Unggul, Berkarakter, dan Siap Bersaing.
-        </p>
-        <a href="#ppdb" class="inline-block px-8 py-3 text-lg bg-amber-600 text-white font-bold rounded-full hover:bg-amber-700 transition duration-300 transform hover:scale-105">
-            Daftar PPDB Sekarang
-        </a>
-    </div>
+  <!-- HEADER DENGAN WARNA KUNING MUDA (AMBER-400) -->
+  <header class="bg-amber-400 shadow-md sticky top-0 z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+      <!-- Logo/Nama Sekolah -->
+      <a href="#beranda" class="text-gray-800 text-xl font-bold">
+          SMPN 01 WONOKERTO
+      </a>
+      <!-- Navigasi Minimal -->
+      <nav class="space-x-4">
+        <a href="#profil" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Profil</a>
+        <a href="#visi" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Visi Misi</a>
+        <a href="#ekskul" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Ekskul</a>
+        <a href="#prestasi" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Prestasi</a>
+        <!-- Menambahkan tautan navigasi ke Galeri -->
+        <a href="#galeri" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Galeri</a>
+        <a href="#guru" class="text-amber-700 hover:text-amber-800 text-sm font-medium">Guru & Staf</a>
+        <a href="#ppdb" class="bg-amber-700 text-white px-3 py-1 rounded text-sm font-medium hover:bg-amber-800">PPDB</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    
+    <!-- BERANDA (Hero Section) -->
+    <section id="beranda" class="hero-section text-center pt-16 pb-20">
+    <div class="content-wrapper bg-white/70 p-8 md:p-12 rounded-lg shadow-xl mx-auto max-w-4xl">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">
+            Selamat Datang di SMPN 01 Wonokerto
+        </h1>
+        <p class="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
+            Menciptakan Generasi Unggul, Berkarakter, dan Siap Bersaing.
+        </p>
+        <a href="#ppdb" class="inline-block px-8 py-3 text-lg bg-amber-600 text-white font-bold rounded-full hover:bg-amber-700 transition duration-300 transform hover:scale-105">
+            Daftar PPDB Sekarang
+        </a>
+    </div>
 </section>
 
-    <!-- PROFIL (About Section) -->
-    <section id="profil" class="py-10">
-      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Profil Sekolah</h2>
-      
-      <div class="bg-white p-6 rounded-lg shadow-md">
-          <p class="text-gray-700 leading-relaxed mb-4">
-              SMP Negeri 01 Wonokerto didirikan secara resmi pada tahun 1985 di Kabupaten Pekalongan, Jawa Tengah, dengan visi untuk mencetak generasi yang cerdas dan berkarakter. Sekolah ini telah terakreditasi A dan unggul dalam pendidikan yang seimbang, berlandaskan tiga pilar utama:
+    <!-- PROFIL (About Section) -->
+    <section id="profil" class="py-10">
+      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Profil Sekolah</h2>
+      
+      <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-gray-700 leading-relaxed mb-4">
+              SMP Negeri 01 Wonokerto didirikan secara resmi pada tahun 1985 di Kabupaten Pekalongan, Jawa Tengah, dengan visi untuk mencetak generasi yang cerdas dan berkarakter. Sekolah ini telah terakreditasi A dan unggul dalam pendidikan yang seimbang, berlandaskan tiga pilar utama:
 
 Akademik Unggul dan Inovatif: Sekolah fokus pada pencapaian standar akademik tinggi, mendorong pemikiran kritis (HOTS), dan didukung oleh guru-guru berkualifikasi (75% bersertifikasi) untuk bimbingan optimal.
 
 Pembentukan Karakter: Penanaman nilai-nilai Profil Pelajar Pancasila (berakhlak mulia, mandiri, gotong royong, dll.) diintegrasikan ke dalam semua kegiatan untuk membentuk integritas moral dan etika sosial siswa.
 
 Keterampilan Digital: Siswa dibekali literasi dan penguasaan teknologi digital agar siap bersaing di era global dan mampu memanfaatkan teknologi sebagai alat pembelajaran dan komunikasi yang efektif.
-          </p>
-          <p class="text-gray-700 leading-relaxed">
-              
-          </p>
-      </div>
-    </section>
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+              
+          </p>
+      </div>
+    </section>
 
-    <!-- VISI MISI (Vision and Mission Section) -->
-    <section id="visi" class="py-10">
-      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Visi & Misi</h2>
+    <!-- VISI MISI (Vision and Mission Section) -->
+    <section id="visi" class="py-10">
+      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Visi & Misi</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Visi Card (Background Kuning Sangat Terang) -->
-          <div class="bg-amber-100 p-6 rounded-lg shadow-md">
-              <h3 class="text-xl font-bold text-amber-800 mb-3">Visi</h3>
-              <p class="italic text-gray-700">
-                  "Unggul dalam prestasi berpijak pada iman,terampil dan berwawasan lingkungan."
-              </p>
-          </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Visi Card (Background Kuning Sangat Terang) -->
+          <div class="bg-amber-100 p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold text-amber-800 mb-3">Visi</h3>
+              <p class="italic text-gray-700">
+                  "Unggul dalam prestasi berpijak pada iman,terampil dan berwawasan lingkungan."
+              </p>
+          </div>
 
-          <!-- Misi List (Aksen Kuning) -->
-          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-600">
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Misi</h3>
-              <ul class="space-y-2 text-gray-700 list-disc list-inside">
-                  <li>Mencitakan profil lulusan yang beriman,bernalar kritis,kreatif,sehat komunikatif dan berprestsi baik akademk maupun non akademik.</li>
-                  <li>Meningkatkan kegiatan keagamaan dalam rangka mewujudikan karakter yang mulia.</li>
-                  <li>Mendorong murid terampil dalam pengolahan hasil perikanan</li>
-              </ul>
-          </div>
-      </div>
-    </section>
-    
-    <!-- GURU & STAF (Staff List) -->
-    <section id="guru" class="py-10">
-        <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Daftar Guru dan Staf</h2>
+          <!-- Misi List (Aksen Kuning) -->
+          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-600">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Misi</h3>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                  <li>Mencitakan profil lulusan yang beriman,bernalar kritis,kreatif,sehat komunikatif dan berprestsi baik akademk maupun non akademik.</li>
+                  <li>Meningkatkan kegiatan keagamaan dalam rangka mewujudikan karakter yang mulia.</li>
+                  <li>Mendorong murid terampil dalam pengolahan hasil perikanan</li>
+              </ul>
+          </div>
+      </div>
+    </section>
+    
+    <!-- GURU & STAF (Staff List) -->
+    <section id="guru" class="py-10">
+        <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Daftar Guru dan Staf</h2>
 
-        <div class="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto">
-            <ul class="space-y-3 divide-y divide-gray-200">
-                <li class="pt-2 flex justify-between items-center">
-                    <span class="font-semibold">Dr.Basuki S.pd.M.pd.</span>
-                    <span class="text-sm text-gray-600 bg-gray-100 px-2 py-0.5 rounded">Kepala Sekolah</span>
-                </li>
-                <li class="pt-2 flex justify-between items-center">
-                    <span class="font-semibold">Bapak Mulyono S.pd.</span>
-                    <span class="text-sm text-gray-600">Guru Matematika</span>
-                </li>
-                <li class="pt-2 flex justify-between items-center">
-                    <span class="font-semibold">Ibu Tatik S.Pd.</span>
-                    <span class="text-sm text-gray-600">Guru Bahasa Indonesia</span>
-                </li>
-                <li class="pt-2 flex justify-between items-center">
-                    <span class="font-semibold">Ibu Sutari S.pd.</span>
-                    <span class="text-sm text-gray-600">Guru Ilmu Pengetahuan Alam</span>
-                </li>
-                <li class="pt-2 flex justify-between items-center">
-                    <span class="font-semibold">Ibu Alfa</span>
-                    <span class="text-sm text-gray-600">Staf Administrasi</span>
-                </li>
-            </ul>
-            <p class="text-center text-sm text-gray-500 mt-4"></p>
-        </div>
-    </section>
+        <div class="bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto">
+            <ul class="space-y-3 divide-y divide-gray-200">
+                <li class="pt-2 flex justify-between items-center">
+                    <span class="font-semibold">Dr.Basuki S.pd.M.pd.</span>
+                    <span class="text-sm text-gray-600 bg-gray-100 px-2 py-0.5 rounded">Kepala Sekolah</span>
+                </li>
+                <li class="pt-2 flex justify-between items-center">
+                    <span class="font-semibold">Bapak Mulyono S.pd.</span>
+                    <span class="text-sm text-gray-600">Guru Matematika</span>
+                </li>
+                <li class="pt-2 flex justify-between items-center">
+                    <span class="font-semibold">Ibu Tatik S.Pd.</span>
+                    <span class="text-sm text-gray-600">Guru Bahasa Indonesia</span>
+                </li>
+                <li class="pt-2 flex justify-between items-center">
+                    <span class="font-semibold">Ibu Sutari S.pd.</span>
+                    <span class="text-sm text-gray-600">Guru Ilmu Pengetahuan Alam</span>
+                </li>
+                <li class="pt-2 flex justify-between items-center">
+                    <span class="font-semibold">Ibu Alfa</span>
+                    <span class="text-sm text-gray-600">Staf Administrasi</span>
+                </li>
+            </ul>
+            <p class="text-center text-sm text-gray-500 mt-4"></p>
+        </div>
+    </section>
 
-    <!-- EKSKUL (Extracurricular Section) -->
-    <section id="ekskul" class="py-10">
-      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Kegiatan Ekstrakurikuler</h2>
+    <!-- EKSKUL (Extracurricular Section) -->
+    <section id="ekskul" class="py-10">
+      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Kegiatan Ekstrakurikuler</h2>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
-              <p class="text-lg font-semibold text-gray-800">Pramuka</p>
-          </div>
-          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
-              <p class="text-lg font-semibold text-gray-800">PMR</p>
-          </div>
-          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
-              <p class="text-lg font-semibold text-gray-800">BTQ</p>
-          </div>
-          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
-              <p class="text-lg font-semibold text-gray-800">Volley Ball</p>
-          </div>
-      </div>
-    </section>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+              <p class="text-lg font-semibold text-gray-800">Pramuka</p>
+          </div>
+          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+              <p class="text-lg font-semibold text-gray-800">PMR</p>
+          </div>
+          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+              <p class="text-lg font-semibold text-gray-800">BTQ</p>
+          </div>
+          <div class="p-4 bg-gray-100 rounded-lg shadow-sm">
+              <p class="text-lg font-semibold text-gray-800"></p>
+          </div>
+      </div>
+    </section>
 
-    <!-- PRESTASI (Achievement Section) -->
-    <section id="prestasi" class="py-10">
-      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Prestasi Sekolah</h2>
+    <!-- PRESTASI (Achievement Section) -->
+    <section id="prestasi" class="py-10">
+      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Prestasi Sekolah</h2>
 
-      <div class="space-y-4 max-w-3xl mx-auto">
-          <!-- Prestasi Item 1 (Aksen Kuning) -->
-          <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-amber-600">
-              <h3 class="text-lg font-bold text-gray-800">Juara 1 Lomba Dongeng</h3>
-              <p class="text-sm text-gray-600">Tingkat Kabupaten Pekalongan, 2024</p>
-          </div>
-          <!-- Prestasi Item 2 (Aksen Kuning) -->
-          <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-amber-600">
-              <h3 class="text-lg font-bold text-gray-800">Juara 1 Lomba Pidato</h3>
-              <p class="text-sm text-gray-600">Tingkat Kecamatan Wonokerto, 2023</p>
-          </div>
-          <!-- Prestasi Item 3 (Aksen Kuning) -->
-          <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-amber-600">
-              <h3 class="text-lg font-bold text-gray-800">Juara 3 Lomba Geguritan</h3>
-              <p class="text-sm text-gray-600">Tingkat Kabupaten Pekalongan, 2023</p>
-          </div>
-      </div>
-    </section>
-    
-    <!-- GALERI (Gallery Section) -->
-    <section id="galeri" class="py-10">
-      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Galeri Foto Sekolah</h2>
+      <div class="space-y-4 max-w-3xl mx-auto">
+          <!-- Prestasi Item 1 (Aksen Kuning) -->
+          <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-amber-600">
+              <h3 class="text-lg font-bold text-gray-800">Juara 1 Lomba Dongeng</h3>
+              <p class="text-sm text-gray-600"></p>
+          </div>
+          <!-- Prestasi Item 2 (Aksen Kuning) -->
+          <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-amber-600">
+              <h3 class="text-lg font-bold text-gray-800">Juara 1 Lomba Pidato</h3>
+              <p class="text-sm text-gray-600"></p>
+          </div>
+          <!-- Prestasi Item 3 (Aksen Kuning) -->
+          <div class="bg-white p-4 rounded-lg shadow-md border-l-4 border-amber-600">
+              <h3 class="text-lg font-bold text-gray-800">Juara 3 Lomba Geguritan</h3>
+              <p class="text-sm text-gray-600"></p>
+          </div>
+      </div>
+    </section>
+    
+    <!-- GALERI (Gallery Section) - BARU DITAMBAHKAN -->
+    <section id="galeri" class="py-10">
+      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Galeri Foto Sekolah</h2>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <!-- Item Galeri 1 (Mushola) -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-              <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Mushola" alt="" class="w-full h-auto">
-              <p class="p-3 text-sm font-medium text-gray-800 text-center">Mushola</p>
-          </div>
-          <!-- Item Galeri 2 (Lomba-lomba) -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-              <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Kegiatan+Lomba" alt="" class="w-full h-auto">
-              <p class="p-3 text-sm font-medium text-gray-800 text-center">Lomba-lomba</p>
-          </div>
-          <!-- Item Galeri 3 (PMR) -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
-              <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Ekskul+PMR" alt="" class="w-full h-auto">
-              <p class="p-3 text-sm font-medium text-gray-800 text-center">PMR</p>
-          </div>
-          <!-- Item Galeri 4 (Pramuka - Hanya tampil di tablet/desktop) -->
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 hidden md:block">
-              <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Ekskul+Pramuka" alt="" class="w-full h-auto">
-              <p class="p-3 text-sm font-medium text-gray-800 text-center">Pramuka</p>
-          </div>
-      </div>
-    </section>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Item Galeri 1 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
+              <img src="mushola.jpeg">
+              <p class="p-3 text-sm font-medium text-gray-800 text-center">Mushola</p>
+          </div>
+          <!-- Item Galeri 2 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
+              <img src="lomba.jpeg">
+              <p class="p-3 text-sm font-medium text-gray-800 text-center">Lomba-lomba</p>
+          </div>
+          <!-- Item Galeri 3 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
+              <img src="pmr.jpeg">
+              <p class="p-3 text-sm font-medium text-gray-800 text-center">PMR</p>
+          </div>
+          <!-- Item Galeri 4 (Hanya tampil di tablet/desktop) -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300 hidden md:block">
+              <img src="pramuka.jpeg">
+              <p class="p-3 text-sm font-medium text-gray-800 text-center">Pramuka</p>
+          </div>
+      </div>
+    </section>
 
-    <!-- PPDB (Contact/CTA Section) DENGAN WARNA KUNING LEBIH GELAP -->
-    <section id="ppdb" class="mt-12 py-8 bg-amber-600 text-white text-center rounded-lg">
-      <h2 class="text-2xl font-bold mb-3 text-white">Informasi PPDB 2025</h2>
-      <p class="text-lg mb-6 opacity-90">
-          Hubungi kami untuk informasi lebih lanjut melalui telepon, email, atau WhatsApp.
-      </p>
+    <!-- PPDB (Contact/CTA Section) DENGAN WARNA KUNING LEBIH GELAP -->
+    <section id="ppdb" class="mt-12 py-8 bg-amber-600 text-white text-center rounded-lg">
+      <h2 class="text-2xl font-bold mb-3 text-white">Informasi PPDB 2025</h2>
+      <p class="text-lg mb-6 opacity-90">
+          Hubungi kami untuk informasi lebih lanjut.
+      </p>
 
-      <div class="space-y-3">
-          <p class="text-sm font-semibold">Telepon: (0285) 441-4314</p>
-          <p class="text-sm font-semibold">Email: smp1wonokertoYahoo.co.id</p>
-          
-          <!-- Tombol WhatsApp BARU -->
-          <a 
-              href="https://wa.me/6281933739057?text=Halo%2C%20saya%20tertarik%20dengan%20informasi%20PPDB%20SMPN%2001%20Wonokerto." 
-              target="_blank" 
-              class="inline-flex items-center justify-center px-6 py-2 text-base font-bold text-white bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105 mt-4"
-          >
-              <!-- Ikon WhatsApp (Inline SVG) -->
-              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12.002 0C5.385 0 0 5.385 0 12.002s5.385 12.002 12.002 12.002c6.617 0 12.002-5.385 12.002-12.002S18.62 0 12.002 0zm3.841 18.066c-.198.156-.453.242-.716.242h-.002c-.287 0-.56-.1-.774-.28l-1.583-1.407c-.426-.379-.99-.588-1.583-.588-.593 0-1.157.209-1.583.588l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm4.568-10.749c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm4.568-10.749c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm-4.423-7.53c.125-.11.233-.243.32-.393l.365-.632c.087-.15.13-.318.13-.496 0-.395-.157-.773-.443-1.058-.286-.286-.663-.443-1.058-.443h-.002c-.395 0-.772.157-1.058.443s-.443.663-.443 1.058c0 .178.043.346.13.496l.365.632c.087.15.195.283.32.393l.632.365c.15.087.318.13.496.13s.346-.043.496-.13l.632-.365zM15.42 12.002c-.21-.18-.482-.28-.769-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm4.568-10.749c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983z"/>
-              </svg>
-              WhatsApp Sekarang
-          </a>
-      </div>
-    </section>
-    
-    <!-- KONTAK -->
-    <section id="kontak" class="py-10">
-      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Lokasi dan Kontak Utama</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Kontak & Alamat -->
-          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Hubungi Kami</h3>
-              <p class="text-gray-700 mb-4">
-                  Untuk pertanyaan lebih lanjut, Anda dapat menghubungi kami melalui jalur berikut:
-              </p>
-              <p class="font-semibold">Telepon: <span class="text-amber-700">(0285) 441-4314</span></p>
-              <p class="font-semibold mb-4">Email: <span class="text-amber-700">smp1wonokertoYahoo.co.id</span></p>
+      <div class="space-y-2">
+          <p class="text-sm font-semibold">Telepon: (0285) 441-4314</p>
+          <p class="text-sm font-semibold">Email: smp1wonokertoYahoo.co.id</p>
+      </div>
+    </section>
+    
+    <!-- KONTAK -->
+    <section id="kontak" class="py-10">
+      <h2 class="text-2xl font-bold text-center mb-6 border-b-2 border-amber-600 pb-2">Lokasi dan Kontak Utama</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Alamat (Aksen Kuning) -->
+          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Alamat Sekolah</h3>
+              <p class="text-gray-700 mb-2">
+                  Wonokerto Kulon, No. 1, Ngasem, Wonokerto Kulon, Kec. Wonokerto, Kabupaten Pekalongan, Jawa Tengah 51153
+              </p>
+              <p class="text-sm text-gray-500 italic mt-4">
+                  
+              </p>
+          </div>
 
-              <!-- Tombol WhatsApp BARU (Duplikat untuk area kontak) -->
-              <a 
-                href="https://wa.me/6281933739057?text=Halo%2C%20saya%20punya%20pertanyaan%20mengenai%20sekolah." 
-                target="_blank" 
-                class="inline-flex items-center px-4 py-2 text-sm font-bold text-white bg-green-500 rounded-lg hover:bg-green-600 transition duration-300 mt-2"
-              >
-                  <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.002 0C5.385 0 0 5.385 0 12.002s5.385 12.002 12.002 12.002c6.617 0 12.002-5.385 12.002-12.002S18.62 0 12.002 0zm3.841 18.066c-.198.156-.453.242-.716.242h-.002c-.287 0-.56-.1-.774-.28l-1.583-1.407c-.426-.379-.99-.588-1.583-.588-.593 0-1.157.209-1.583.588l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm4.568-10.749c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm4.568-10.749c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm-4.423-7.53c.125-.11.233-.243.32-.393l.365-.632c.087-.15.13-.318.13-.496 0-.395-.157-.773-.443-1.058-.286-.286-.663-.443-1.058-.443h-.002c-.395 0-.772.157-1.058.443s-.443.663-.443 1.058c0 .178.043.346.13.496l.365.632c.087.15.195.283.32.393l.632.365c.15.087.318.13.496.13s.346-.043.496-.13l.632-.365zM15.42 12.002c-.21-.18-.482-.28-.769-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983zm4.568-10.749c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.426.379-.99.588-1.583.588-.593 0-1.157-.209-1.583-.588l-1.583-1.407c-.214-.18-.487-.28-.774-.28h-.002c-.287 0-.56.1-.774.28l-1.583 1.407c-.214.18-.487.28-.774.28h-.002c-.263 0-.518-.086-.716-.242C3.882 16.924 3 14.582 3 12.002c0-4.962 4.04-9.002 9.002-9.002s9.002 4.04 9.002 9.002c0 2.58-1.026 5.068-2.842 6.845zM12.002 21.004c-4.954 0-8.983-4.029-8.983-8.983 0-4.954 4.029-8.983 8.983-8.983s8.983 4.029 8.983 8.983c0 4.954-4.029 8.983-8.983 8.983z"/>
-                  </svg>
-                  Chat via WA
-              </a>
+          <!-- Peta Google Maps (Aksen Kuning) -->
+          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Peta Lokasi</h3>
+              <!-- Iframe Peta Google Maps -->
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.8852778601254!2d109.62345757403466!3d-6.8680831671959925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70265736c53487%3A0x9ba4ec511f44eca4!2sSMP%20Negeri%201%20Wonokerto!5e1!3m2!1sid!2sid!4v1762841772565!5m2!1sid!2sid" 
+                width="100%" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded w-full"
+              ></iframe>
+          </div>
+      </div>
+    </section>
 
-              <h3 class="text-xl font-bold text-gray-800 mb-3 mt-8">Alamat Sekolah</h3>
-              <p class="text-gray-700 mb-2">
-                  Wonokerto Kulon, No. 1, Ngasem, Wonokerto Kulon, Kec. Wonokerto, Kabupaten Pekalongan, Jawa Tengah 51153
-              </p>
-          </div>
+  </main>
 
-          <!-- Peta Google Maps (Aksen Kuning) -->
-          <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-500">
-              <h3 class="text-xl font-bold text-gray-800 mb-3">Peta Lokasi</h3>
-              <!-- Iframe Peta Google Maps -->
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.8852778601254!2d109.62345757403466!3d-6.8680831671959925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70265736c53487%3A0x9ba4ec511f44eca4!2sSMP%20Negeri%201%20Wonokerto!5e1!3m2!1sid!2sid!4v1762841772565!5m2!1sid!2sid" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                class="rounded w-full"
-              ></iframe>
-          </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER DENGAN WARNA KUNING MUDA (AMBER-400) -->
-  <footer class="bg-amber-400 text-center py-4 mt-8">
-    <p class="text-sm text-gray-800">
-      &copy; 2025 SMP Negeri 01 Wonokerto.
-    </p>
-  </footer>
+  <!-- FOOTER DENGAN WARNA KUNING MUDA (AMBER-400) -->
+  <footer class="bg-amber-400 text-center py-4 mt-8">
+    <p class="text-sm text-gray-800">
+      &copy; 2025 SMP Negeri 01 Wonokerto.
+    </p>
+  </footer>
 
 </body>
 </html>
